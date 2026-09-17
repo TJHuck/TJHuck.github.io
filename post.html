@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Writing by Terry Huck about design, development, and the web.">
-	<title>Writing - Terry Huck</title>
+	<title>Post - Terry Huck</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="writing.css">
 </head>
@@ -24,15 +24,7 @@
 	</header>
 	<main>
 		<section class="writing-intro">
-			<div class="wrap">
-				<div class="eyebrow">The notebook</div>
-				<h1>Writing</h1>
-				<p>My notes on making things, things I've learned, and making my philosophy background applicable.</p>
-                <p>A mixture of short thoughts and longer well-thoughtout pieces.</p>
-			</div>
-		</section>
-		<section>
-			<div class="wrap writing-list posts" id="all-posts"></div>
+			<div class="wrap writing-list" id="post-content"></div>
 		</section>
 	</main>
 	<footer class="wrap">
@@ -45,7 +37,21 @@
 	</footer>
 	<script src="posts.js"></script>
 	<script>
-		document.querySelector("#all-posts").innerHTML = BLOG_POSTS.map(renderPostCard).join("");
+		const slug = new URLSearchParams(window.location.search).get("slug");
+		const post = BLOG_POSTS.find((candidate) => candidate.slug === slug);
+		const content = document.querySelector("#post-content");
+
+		if (post) {
+			document.title = `${post.title} - Terry Huck`;
+			content.innerHTML = renderFullPost(post);
+		} else {
+			content.innerHTML = `
+				<article class="full-post">
+					<h2>Post not found</h2>
+					<p>This post may have moved. Return to the writing page to browse all posts.</p>
+					<a class="back-link" href="writing.html">← All posts</a>
+				</article>`;
+		}
 	</script>
 </body>
 </html>

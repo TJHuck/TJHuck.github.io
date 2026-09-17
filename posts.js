@@ -43,17 +43,20 @@ function postTags(post) {
 
 function renderPostCard(post) {
 	return `
+		<a class="post-card" href="post.html?slug=${post.slug}">
 		<article class="post">
 			<small>${postMeta(post)}</small>
-			<h3><a href="writing.html#${post.slug}">${post.title}</a></h3>
+			<h3>${post.title}</h3>
 			<p>${post.excerpt}</p>
 			<div class="tags">${postTags(post)}</div>
-		</article>`;
+		</article>
+		</a>`;
 }
 
 function renderFullPost(post) {
 	return `
-		<article class="full-post" id="${post.slug}">
+		<article class="full-post">
+			<a class="back-link" href="writing.html">← All posts</a>
 			<small>${postMeta(post)}</small>
 			<h2>${post.title}</h2>
 			<div class="tags">${postTags(post)}</div>

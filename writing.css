@@ -17,7 +17,11 @@
 
 .writing-list{
 	display:grid;
-	gap:0
+	gap:20px
+}
+
+.writing-list .post{
+	height:100%
 }
 
 .full-post{
@@ -25,6 +29,13 @@
 	padding:0 0 58px;
 	margin:0 0 58px;
 	border-bottom:1px solid var(--line)
+}
+
+.back-link{
+	display:inline-block;
+	color:var(--accent-dark);
+	font-weight:700;
+	margin-bottom:28px
 }
 
 .full-post:last-child{

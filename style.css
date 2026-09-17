@@ -269,16 +269,32 @@ section{
     padding:25px
 }
 
+.post-card{
+    display:block;
+    height:100%
+}
+
+.post-card:hover .post,
+.post-card:focus-visible .post{
+    border-color:var(--accent);
+    transform:translateY(-3px)
+}
+
+.post-card:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:4px
+}
+
+.post{
+    transition:border-color .2s ease,transform .2s ease
+}
+
 .post small{
     color:var(--muted)
 }
 
 .post h3{
     margin-top:12px
-}
-
-.post h3 a:hover{
-    color:var(--accent)
 }
 
 .about{
