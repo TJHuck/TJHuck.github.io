@@ -22,7 +22,7 @@
 					<a href="#work">Work</a>
 					<a href="#writing">Writing</a>
 					<a href="#about">About</a>
-					<a href="mailto:hello@tjhuck.com">Contact ↗</a>
+					<a href="mailto:tjhuck821@gmail.com">Contact ↗</a>
 				</div>
 			</nav>
 		</div>
@@ -48,7 +48,7 @@
 						<div class="eyebrow">Selected work</div>
 						<h2>A few things I've made</h2>
 					</div>
-					<a href="mailto:hello@tjhuck.com">Start a project →</a>
+					<a href="www.example.com">Start a project →</a>  <!-- add fiverr here -->
 				</div>
 				<div class="projects">
 					<article class="project">
@@ -85,26 +85,9 @@
 						<div class="eyebrow">From the notebook</div>
 						<h2>Recent writing</h2>
 					</div>
-					<a href="#writing">All posts →</a>
+					<a href="writing.html">All posts →</a>
 				</div>
-				<div class="posts">
-					<article class="post">
-						<small>May 14, 2024 · 5 min read</small>
-						<h3>
-							<a href="#">Make room for the unfinished idea</a>
-						</h3>
-						<p>Why sharing work in progress can be a better creative practice than waiting for perfect.</p>
-						<div class="tags">PROCESS</div>
-					</article>
-					<article class="post">
-						<small>April 02, 2024 · 8 min read</small>
-						<h3>
-							<a href="#">A small case for smaller websites</a>
-						</h3>
-						<p>Notes on making the web a little more human, intentional, and fun to visit.</p>
-						<div class="tags">WEB · CULTURE</div>
-					</article>
-				</div>
+				<div class="posts" id="recent-posts"></div>
 			</div>
 		</section>
 		<section id="about">
@@ -132,7 +115,11 @@
 			<a href="mailto:tjhuck821@gmail.com">Email</a>
 		</div>
 	</footer>
+	<script src="posts.js"></script>
 	<script>
+		const recentPosts = document.querySelector("#recent-posts");
+		recentPosts.innerHTML = BLOG_POSTS.slice(0, 2).map(renderPostCard).join("");
+
 		const words = [
 			"curiosity.",
 			"craft.",

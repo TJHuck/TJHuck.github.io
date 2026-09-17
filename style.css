@@ -277,6 +277,10 @@ section{
     margin-top:12px
 }
 
+.post h3 a:hover{
+    color:var(--accent)
+}
+
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;

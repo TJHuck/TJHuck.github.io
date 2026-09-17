@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Writing by Terry Huck about design, development, and the web.">
+	<title>Writing - Terry Huck</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="writing.css">
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<nav>
+				<a class="logo" href="index.html">TJ<span>.</span></a>
+				<div class="links">
+					<a href="index.html#work">Work</a>
+					<a href="writing.html">Writing</a>
+					<a href="index.html#about">About</a>
+					<a href="mailto:tjhuck821@gmail.com">Contact ↗</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="writing-intro">
+			<div class="wrap">
+				<div class="eyebrow">The notebook</div>
+				<h1>Writing</h1>
+				<p>Notes on making things, learning in public, and keeping the web human.</p>
+			</div>
+		</section>
+		<section>
+			<div class="wrap writing-list" id="all-posts"></div>
+		</section>
+	</main>
+	<footer class="wrap">
+		<div>© 2026 Terry Huck.</div>
+		<div class="social">
+			<a href="https://github.com/TJHuck">GitHub</a>
+			<a href="https://www.linkedin.com/terry-huck">LinkedIn</a>
+			<a href="mailto:tjhuck821@gmail.com">Email</a>
+		</div>
+	</footer>
+	<script src="posts.js"></script>
+	<script>
+		document.querySelector("#all-posts").innerHTML = BLOG_POSTS.map(renderFullPost).join("");
+	</script>
+</body>
+</html>
