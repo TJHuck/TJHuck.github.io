@@ -89,10 +89,35 @@ nav{
     max-width:740px
 }
 
-.hero h1 em{
-    font-family:inherit;
-    font-weight:400;color:var(--accent);
-    font-style:normal
+.typed-wrap {
+    --cursor-shift: 0px;
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.typed-text {
+    display: inline-block;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.62ch;
+    height: 0.9em;
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(183,243,75,.8);
+    transform: translate(var(--cursor-shift), -50%);
+    transition: transform 80ms linear;
+    animation: blink 0.9s steps(1) infinite;
+}
+
+@keyframes blink{
+    0%, 50% { opacity:1 }
+    50.01%, 100% { opacity:0 }
 }
 
 .hero p{

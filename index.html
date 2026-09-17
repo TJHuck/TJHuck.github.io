@@ -31,7 +31,7 @@
 		<div class="wrap hero">
 			<div>
 				<div class="eyebrow">Hello, I'm Terry Huck</div>
-				<h1>Software built with <em>curiosity.</em></h1>
+				<h1>Software built with <span class="typed-wrap"><span class="cursor" aria-hidden="true"></span><span class="typed-text" aria-live="polite"></span></span></h1>
 				<p>Designer, developer, aspiring ethical hacker and occasional writer documenting what I learn along the way.</p>
 				<a class="button" href="#work">See my work ↓</a>
 				<a class="button secondary" href="#writing">Read the blog</a>
@@ -132,5 +132,57 @@
 			<a href="mailto:tjhuck821@gmail.com">Email</a>
 		</div>
 	</footer>
+	<script>
+		const words = [
+			"curiosity.",
+			"craft.",
+			"clarity.",
+			"care.",
+			"computing."
+		];
+
+		const typedText = document.querySelector(".typed-text");
+		const typedWrap = document.querySelector(".typed-wrap");
+		let wordIndex = 0;
+		let charIndex = 0;
+		let deleting = false;
+
+		function updateCursorMotion() {
+    		const textWidth = typedText.getBoundingClientRect().width;
+    		typedWrap.style.setProperty("--cursor-shift", `${textWidth}px`);
+		}
+
+		function typeLoop() {
+			const currentWord = words[wordIndex];
+
+			if (!deleting) {
+				charIndex += 1;
+				typedText.textContent = currentWord.slice(0, charIndex);
+				updateCursorMotion();
+
+				if (charIndex === currentWord.length) {
+					deleting = true;
+					setTimeout(typeLoop, 1100);
+					return;
+				}
+			} else {
+				charIndex -= 1;
+				typedText.textContent = currentWord.slice(0, charIndex);
+				updateCursorMotion();
+
+				if (charIndex === 0) {
+					deleting = false;
+					wordIndex = (wordIndex + 1) % words.length;
+				}
+			}
+
+			const speed = deleting ? 55 : 120;
+			setTimeout(typeLoop, speed);
+		}
+
+		typedText.textContent = "";
+		updateCursorMotion();
+		typeLoop();
+	</script>
 </body>
 </html>
