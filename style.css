@@ -92,6 +92,7 @@ nav{
 .typed-wrap {
     --cursor-shift: 0px;
     display: inline-block;
+    width: 10ch;
     position: relative;
     font-weight: 400;
     color: var(--accent);
