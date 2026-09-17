@@ -1,12 +1,12 @@
 :root{
-    --ink:#182126;
-    --muted:#66747b;
-    --paper:#f8f7f2;
-    --card:#fff;
-    --line:#dfe4e1;
-    --accent:#ef795f;
-    --accent-dark:#bb4939;
-    --mint:#dcefe8;
+    --ink:#e7f2e8;
+    --muted:#91a59a;
+    --paper:#0b100e;
+    --card:#111a16;
+    --line:#26352d;
+    --accent:#b7f34b;
+    --accent-dark:#e7b84b;
+    --terminal:#16221b;
     --max:1120px
 }
 
@@ -21,7 +21,9 @@ html{
 body{
     margin:0;color:var(--ink);
     background:var(--paper);
-    font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+    font:16px/1.6 "IBM Plex Mono","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    background-image:linear-gradient(rgba(183,243,75,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(183,243,75,.035) 1px,transparent 1px);
+    background-size:32px 32px
 }
 
 a{
@@ -29,7 +31,7 @@ a{
 }
 
 a:hover{
-    color:var(--accent-dark)
+    color:var(--accent)
 }
 
 .wrap{
@@ -38,7 +40,7 @@ a:hover{
 }
 
 header{
-    padding:24px 0;border-bottom:1px solid var(--line)
+    padding:22px 0;border-bottom:1px solid var(--line);background:rgba(11,16,14,.86);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)
 }
 
 nav{
@@ -48,19 +50,19 @@ nav{
 }
 
 .logo{
-    font-weight:800;letter-spacing:-.04em;
-    font-size:1.3rem
+    font-weight:800;letter-spacing:.04em;
+    font-size:1.1rem
 }
 
 .logo span{
-    color:var(--accent)
+    color:var(--accent-dark)
 }
 
 .links{
     display:flex;
     gap:28px;
     color:var(--muted);
-    font-size:.94rem
+    font-size:.8rem
 }
 
 .links a:hover{
@@ -70,66 +72,70 @@ nav{
 .hero{
     display:grid;
     grid-template-columns:1.25fr .75fr;
-    gap:70px;align-items:center;padding:100px 0 110px
+    gap:70px;align-items:center;padding:110px 0 120px
 }
 
 .eyebrow{
-    color:var(--accent-dark);
+    color:var(--accent);
     font-weight:750;
     letter-spacing:.12em;
     text-transform:uppercase;
-    font-size:.76rem
+    font-size:.72rem
 }
 
 .hero h1{
-    font-size:clamp(3.3rem,7vw,6.4rem);
-    line-height:.98;letter-spacing:-.075em;margin:18px 0 25px;
+    font-size:clamp(3rem,7vw,6.2rem);
+    line-height:.98;letter-spacing:-.09em;margin:18px 0 25px;
     max-width:740px
 }
 
 .hero h1 em{
-    font-family:Georgia,serif;
+    font-family:inherit;
     font-weight:400;color:var(--accent);
-    font-style:italic
+    font-style:normal
 }
 
 .hero p{
-    font-size:1.18rem;color:var(--muted);
+    font-size:1rem;color:var(--muted);
     max-width:550px;margin:0 0 30px
 }
 
 .button{
-    display:inline-block;background:var(--ink);
-    color:#fff;
-    border-radius:5px;padding:12px 19px;
-    font-weight:700
+    display:inline-block;background:var(--accent);
+    color:#0b100e;
+    border:1px solid var(--accent);border-radius:2px;padding:12px 19px;
+    font-weight:700;font-size:.86rem
 }
 
 .button:hover{
-    background:var(--accent);
-    color:#fff
+    background:var(--accent-dark);
+    border-color:var(--accent-dark);color:#0b100e
 }
 
 .button.secondary{
     background:transparent;
     color:var(--ink);
-    border:1px solid var(--ink);
+    border:1px solid var(--line);
     margin-left:9px
 }
 
 .portrait{
-    background:var(--mint);
-    border-radius:48% 48% 12px 12px;
-    padding:28px 28px 0;
+    background:var(--terminal);
+    border:1px solid var(--line);border-radius:2px;
+    padding:42px 28px 28px;
     max-width:330px;
     justify-self:end;
-    transform:rotate(3deg)
+    transform:rotate(2deg);position:relative
+}
+
+.portrait:before{
+    content:"●  ●  ●";position:absolute;top:12px;left:16px;color:var(--accent-dark);font-size:.7rem;letter-spacing:.15em
 }
 
 .portrait .face{
     height:285px;
-    border-radius:48% 48% 0 0;
-    background:linear-gradient(145deg,#fac6a7,#e99378);
+    border-radius:0;
+    background:repeating-linear-gradient(0deg,transparent 0 11px,rgba(183,243,75,.12) 12px),repeating-linear-gradient(90deg,transparent 0 11px,rgba(183,243,75,.12) 12px),#0d1511;
     position:relative;
     overflow:hidden
 }
@@ -137,19 +143,19 @@ nav{
 .face:before{
     content:"";
     position:absolute;
-    width:190px;height:110px;
-    background:#24353c;
-    border-radius:50% 50% 12% 12%;
-    top:0;left:45px
+    width:170px;height:170px;
+    background:transparent;
+    border:2px solid var(--accent);
+    border-radius:50%;
+    top:48px;left:50%;transform:translateX(-50%)
 }
 
 .face:after{
-    content:"✦";
+    content:"TJ_HUCK.exe";
     position:absolute;
-    color:#fff;
-    bottom:36px;
-    right:38px;
-    font-size:2.3rem
+    color:var(--accent);
+    bottom:24px;left:0;right:0;text-align:center;
+    font-size:.75rem
 }
 
 section{
@@ -164,7 +170,7 @@ section{
     margin-bottom:34px
 }
 .section-head h2{
-    font-size:2.2rem;
+    font-size:2rem;
     letter-spacing:-.05em;
     margin:7px 0 0
 }
@@ -184,24 +190,24 @@ section{
 .post{
     background:var(--card);
     border:1px solid var(--line);
-    border-radius:8px;
+    border-radius:2px;
     overflow:hidden
 }
 
 .project-image{
     height:180px;
-    background:#d5e8e1;
+    background:var(--terminal);
     display:grid;
-    place-items:center;
-    font-size:3.7rem
+    place-items:center;font-family:inherit;
+    font-size:3.7rem;color:var(--accent)
 }
 
 .project:nth-child(2) .project-image{
-    background:#f7dfc4
+    background:#1b1b13;color:var(--accent-dark)
 }
 
 .project:nth-child(3) .project-image{
-    background:#e6d8ee
+    background:#111b20;color:#76d7d0
 }
 
 .project-body{
@@ -222,7 +228,7 @@ section{
 
 .tags{
     font-size:.77rem;
-    color:var(--accent-dark);
+    color:var(--accent);
     font-weight:700;
     letter-spacing:.04em
 }
@@ -274,8 +280,8 @@ section{
 
 .skills span{
     padding:7px 12px;
-    border-radius:30px;
-    background:var(--mint);
+    border-radius:2px;
+    background:var(--terminal);border:1px solid var(--line);
     font-size:.86rem;
     font-weight:650
 }
