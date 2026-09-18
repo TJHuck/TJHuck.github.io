@@ -18,14 +18,14 @@ const BLOG_POSTS = [
 		slug: "my-experience-with-linux-a-retrospective",
 		title: "My Experience with Linux, A Retrospective.",
 		date: "2026-09-12",
-		readTime: "8 min read",
+		readTime: "2 min read",
 		excerpt: "Making the jump.",
 		tags: ["OPERATING SYSTEMS", "CULTURE"],
 		body: [
-			"The biggest opening remark about moving to linux, that I think everyone can agree with, is that it is not for everyone. But those who grow tired with Window's resource heavy design, bloatware, and constant overbearing AI integration into the roots of the Operating System. I would certainly reccomend it.",
+			"The biggest opening remark about moving to linux, that I think everyone can agree with, is that it is not for everyone. But for those who grow tired with Window's resource heavy design, bloatware, and constant overbearing AI integration into the roots of the Operating System. I would certainly reccomend it.",
             "For some background information, I have some previous experience with Linux. I knew what I was getting into before I switched over on my main work machine. I've been dualbooting distros like Ubuntu and Mint on old computers and chromebooks before I really even understood the point of Linux.",
-            "The distro I chose to switch over too is CachyOS. Which doesn't make much sense for a work machine as CachyOS is marketed as a gaming distro, but the main reason is that it is built on Arch. CachyOS provides the packaged stability with the bleeding edge software and access to the AUR of Arch.",
-            "My experience thus far has been great. I haven't lost much of any windows specific functionality, as the things I need are compatible with the proton and wine compatability layers, and switching to a lighter operating system that is packaged with optimizations has significantly improved my battery life. My system runs faster, boots sooner, and is in general more responsive. I also have an appreciation for the fish shell, though I am much more used to bash which I use activley on my Ubuntu server, but have used previously on other distros. I also have found out about tools like auto-cpufreq, which essentially helps the kernel use the CPU in a more optimized manner.",
+            "The distro I chose to switch over to is CachyOS. Which doesn't make much sense for a work machine as CachyOS is marketed as a gaming distro, but the main reason is that it is built on Arch. CachyOS provides the packaged stability with the bleeding edge software and access to the AUR of Arch.",
+            "My experience thus far has been great. I haven't lost much of any windows specific functionality, as the things I need are compatible with the proton and wine compatability layers, and switching to a lighter operating system that is packaged with optimizations has significantly improved my battery life. My system runs faster, boots sooner, and is in general more responsive. I also have an appreciation for the fish shell, though I am much more used to bash which I use activley on my Ubuntu server, but have also used previously on other distros. I also have found out about tools like auto-cpufreq, which essentially helps the kernel use the CPU in a more optimized manner.",
             "Overall, my experience daily driving Linux for general use and development has been amazing. Maybe the year of Linux truly is upon us."
 		]
 	}
