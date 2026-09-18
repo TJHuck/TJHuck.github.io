@@ -1,10 +1,10 @@
 const BLOG_POSTS = [
 	{
-		slug: "make-room-for-the-unfinished-idea",
-		title: "Make room for the unfinished idea",
-		date: "2024-05-14",
+		slug: "revisit-old-projects",
+		title: "Revisit Old Projects",
+		date: "2026-09-17",
 		readTime: "5 min read",
-		excerpt: "Why sharing work in progress can be a better creative practice than waiting for perfect.",
+		excerpt: "Why revisiting old projects helps you become a better developer.",
 		tags: ["PROCESS"],
 		body: [
 			"The unfinished idea is usually the one with the most energy. It still has room to surprise you, change shape, and become something better than the version you first imagined.",
