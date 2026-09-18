@@ -8,11 +8,10 @@ const BLOG_POSTS = [
 		tags: ["PROCESS"],
 		body: [
 			"A lot of junior or beginner developers I know start projects and repos, make the first iteration, and then leave the code to age in their GitHub.",
-			"Which don't get me wrong. Doing a lot of projects to expand your knowledge is great. It broadens your horizons so much to all of the different applications for coding."
-			"In doing so many different projects, you lose out on the knowlege you gain from returning to old projects and improving them."
-			"I recently returned to my Albion College Navigation tool, which I haven't worked on in a year from time of writing. I know so much more about python and algorithms, why would I not return to debug my old code? Why would I not learn from
-			my past mistakes?"
-			"continue writing here"
+			"Which don't get me wrong. Doing a lot of projects to expand your knowledge is great. It broadens your horizons so much to all of the different applications for coding.",
+			"In doing so many different projects, you lose out on the knowlege you gain from returning to old projects and improving them.",
+			"I recently returned to my Albion College Navigation tool, which I haven't worked on in a year from time of writing. I know so much more about python and algorithms, why would I not return to debug my old code? Why would I not learn from my past mistakes?",
+			"continue writing here",
 		]
 	},
 	{
