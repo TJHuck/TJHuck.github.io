@@ -7,8 +7,12 @@ const BLOG_POSTS = [
 		excerpt: "Why revisiting old projects helps you become a better developer.",
 		tags: ["PROCESS"],
 		body: [
-			"The unfinished idea is usually the one with the most energy. It still has room to surprise you, change shape, and become something better than the version you first imagined.",
-			"Sharing work in progress creates useful pressure without requiring a final answer. It invites better questions, clearer feedback, and a record of how the work actually came together."
+			"A lot of junior or beginner developers I know start projects and repos, make the first iteration, and then leave the code to age in their GitHub.",
+			"Which don't get me wrong. Doing a lot of projects to expand your knowledge is great. It broadens your horizons so much to all of the different applications for coding."
+			"In doing so many different projects, you lose out on the knowlege you gain from returning to old projects and improving them."
+			"I recently returned to my Albion College Navigation tool, which I haven't worked on in a year from time of writing. I know so much more about python and algorithms, why would I not return to debug my old code? Why would I not learn from
+			my past mistakes?"
+			"continue writing here"
 		]
 	},
 	{
