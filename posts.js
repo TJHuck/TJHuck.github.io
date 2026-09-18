@@ -1,7 +1,7 @@
 const BLOG_POSTS = [
 	{
 		slug: "revisit-old-projects",
-		title: "Revisit Old Projects",
+		title: "Revisit Old Projects.",
 		date: "2026-09-17",
 		readTime: "5 min read",
 		excerpt: "Why revisiting old projects helps you become a better developer.",
@@ -15,14 +15,14 @@ const BLOG_POSTS = [
 		]
 	},
 	{
-		slug: "a-small-case-for-smaller-websites",
-		title: "A small case for smaller websites",
-		date: "2024-04-02",
+		slug: "my-experience-with-linux-a-retrospective",
+		title: "My Experience with Linux, A Retrospective.",
+		date: "2026-09-19",
 		readTime: "8 min read",
-		excerpt: "Notes on making the web a little more human, intentional, and fun to visit.",
-		tags: ["WEB", "CULTURE"],
+		excerpt: "Making the jump.",
+		tags: ["OPERATING SYSTEMS", "CULTURE"],
 		body: [
-			"A website does not need to be large to be useful. A focused collection of pages can be easier to maintain, easier to understand, and more pleasant to return to.",
+			"The biggest opening remark about moving to linux.",
 			"Small websites also leave room for personality. They can be direct, fast, and specific instead of trying to serve every audience at once."
 		]
 	}
